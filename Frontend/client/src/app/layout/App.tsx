@@ -1,7 +1,7 @@
-import Catalog from "../../features/catalog/Catalog";
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import Header from "./Header";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [darkMode,setDarkMode] = useState(false);
@@ -23,7 +23,7 @@ function App() {
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
       <Container>
         {/*the list of the product won't be at the edge of the page some paddi g will be added*/}
-      <Catalog/>
+      <Outlet/>{/*This is where the content of the currently active route (child route) will be displayed. For example, if the current route is /products, the list of products will be rendered here.*/}
       </Container>
     </ThemeProvider>
   );
