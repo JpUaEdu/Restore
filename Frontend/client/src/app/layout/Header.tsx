@@ -36,7 +36,7 @@ export default function Header({darkMode,handleThemeChange}:Props){
                     <Typography variant='h6' component={NavLink} 
                 to='/'
                 sx={navStyles}>
-                    RE-STORE
+                    RE-STOREE
                 </Typography>
                 <Switch
                     checked={darkMode} onChange={handleThemeChange}
